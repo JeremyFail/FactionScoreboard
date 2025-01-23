@@ -73,6 +73,7 @@ public class FS extends JavaPlugin
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args)
 	{
+		// TODO: Refactor to support tab-complete
 		if (args.length == 0)
 		{
 			sender.sendMessage("\u00a7cUnknown arguments. /map <info/toggle/reload>");
