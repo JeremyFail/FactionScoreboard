@@ -6,7 +6,8 @@ package com.ngxdev.faction.scoreboard.hook;
 
 import com.ngxdev.faction.scoreboard.FS;
 
-public enum FactionType {
+public enum FactionType 
+{
     WILDERNESS("wilderness", "Wilderness"),
     SAFEZONE("safezone", "Safezone"),
     WARZONE("warzone", "Warzone"),
@@ -17,7 +18,8 @@ public enum FactionType {
     TRUCE("truce", "Truce"),
     YOU("you", "You");
 
-    public static String replaceColors(String line) throws Exception {
+    public static String replaceColors(String line) throws Exception 
+    {
         return line
                 .replace("\u00a70", "\u00a7$" + WILDERNESS.color)
                 .replace("\u00a71", "\u00a7$" + SAFEZONE.color)
@@ -30,20 +32,23 @@ public enum FactionType {
                 .replace("\u00a78", "\u00a7$" + YOU.color)
                 .replace("\u00a7$", "\u00a7");
     }
-
-    public String id;
-    public String displayname;
-    public String color;
-
-    public static void reload() {
-        for (FactionType type : values()) {
-            type.color = FS.config.getString("map-config." + type.id);
-        }
-    }
-
-    FactionType(String s, String s2) {
-        id = s;
-        displayname = s2;
-        color = FS.config.getString("map-config." + s);
-    }
+	
+	public String id;
+	public String displayname;
+	public String color;
+	
+	public static void reload()
+	{
+		for (FactionType type : values())
+		{
+			type.color = FS.config.getString("map-config." + type.id);
+		}
+	}
+	
+	FactionType(String s, String s2)
+	{
+		id = s;
+		displayname = s2;
+		color = FS.config.getString("map-config." + s);
+	}
 }

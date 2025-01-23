@@ -1,8 +1,10 @@
 name: FactionScoreboard
 main: com.ngxdev.faction.scoreboard.FS
-version: 3.0
-author: [Luke Kander]
-softdepend: [Factions,PlaceholderAPI,MVdWPlaceholderAPI,LegacyFactions]
+version: 3.1.0
+authors: [Luke Kander, Ymerejliaf]
+softdepend: [Factions,PlaceholderAPI,MVdWPlaceholderAPI]
+api-version: 1.16
+description: Display faction claims map in a scoreboard.
 commands:
   factionscoreboard:
     aliases: [fs,map]
